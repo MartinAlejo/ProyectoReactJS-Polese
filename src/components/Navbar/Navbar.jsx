@@ -1,7 +1,7 @@
-import { AppBar, Badge, Box, Toolbar, Typography } from "@mui/material"
+import { AppBar, Box, Toolbar, Typography } from "@mui/material"
 import { NavItem } from "../NavItem/NavItem";
-import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import PhonelinkRoundedIcon from '@mui/icons-material/PhonelinkRounded';
+import { CartWidget } from "../CartWidget/CartWidget";
 
 export const Navbar = () => {
   return (
@@ -37,9 +37,7 @@ export const Navbar = () => {
           </Typography>
 
           <div style={{marginLeft:"2vw", marginRight: "1vw"}}>
-            <Badge badgeContent={2} color="error">
-              <ShoppingCartRoundedIcon />
-            </Badge>
+            <CartWidget />
           </div>
           
         </Toolbar>
