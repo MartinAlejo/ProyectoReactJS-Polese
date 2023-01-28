@@ -8,6 +8,7 @@ export const Navbar = () => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" color="primary">
         <Toolbar>
+
           <PhonelinkRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
           <Typography
             variant="h6"
@@ -27,26 +28,20 @@ export const Navbar = () => {
           >
             BIT BY BIT
           </Typography>
-          {/* <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="menu"
-            sx={{ mr: 2 }}
-          >
-            <MenuIcon />
-          </IconButton> */}
+
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: "flex", justifyContent: "center",alignItems: "center" }}>
             <NavItem title="Inicio" href="#"/>
             <NavItem title="Nosotros" href="#"/>
             <NavItem title="Productos" href="#"/>
             <NavItem title="Contacto" href="#"/>
           </Typography>
+
           <div style={{marginLeft:"2vw", marginRight: "1vw"}}>
             <Badge badgeContent={2} color="error">
               <ShoppingCartRoundedIcon />
             </Badge>
           </div>
+          
         </Toolbar>
       </AppBar>
     </Box>
