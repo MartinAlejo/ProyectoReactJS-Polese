@@ -36,7 +36,7 @@ export const Navbar = () => {
             <NavItem title="Contacto" href="#"/>
           </Typography>
 
-          <div style={{marginLeft:"2vw", marginRight: "1vw"}}>
+          <div style={{marginLeft:"3vw", marginRight: "1vw"}}>
             <CartWidget />
           </div>
           
