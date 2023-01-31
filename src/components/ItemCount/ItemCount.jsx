@@ -21,11 +21,14 @@ export const ItemCount = ({stockInicial}) => {
   }
 
   const agregarAlCarrito = () => {
+
+    if (contador === 0) {
+      return
+    }
+
     console.log(`Se agregaron ${contador} unidades de este producto al carrito`)
     setContador(0)
   }
-
-  console.log(stock)
 
   return (
     <>
