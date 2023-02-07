@@ -1,8 +1,18 @@
-import { Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { products } from '../../productsMock'
+import { ItemList } from '../ItemList/ItemList'
 
-export const ItemListContainer = ({greeting}) => {
+export const ItemListContainer = () => {
+
+  const [items, setItems] = useState([])
+
+  useEffect(() => {
+
+    setItems(products);
+
+  }, [])
+
   return (
-    <Typography variant="h2" sx={{m: 4, p: 1, border: 3, borderRadius: 10, display: "flex", justifyContent: "center"}}>{greeting}</Typography>
+    <ItemList items={items} />
   )
 }

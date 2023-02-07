@@ -26,4 +26,13 @@ export const products = [
     category: "notebooks",
     img: "https://res.cloudinary.com/dhur6a1pk/image/upload/v1675773706/Notebook-Intel-Core-i3-1005G1-8GB-256GB-SSD-14-IPS-FHD-Win10Home_sepgvi.webp",
   },
+  {
+    id: 4,
+    title: "Notebook Dell Inspiron 15 3515 - 15,6 - Ryzen 5 3450U- 8GB - 256GB SSD",
+    price: 219.999,
+    stock: 5,
+    description: "Descripción de Notebook Intel Core i3",
+    category: "notebooks",
+    img: "https://res.cloudinary.com/dhur6a1pk/image/upload/v1675777537/Notebook-Dell-Inspiron-15-3515-15-6-Ryzen-5-3450U-8GB-256GB-SSD_asw6zw.webp",
+  },
 ];
