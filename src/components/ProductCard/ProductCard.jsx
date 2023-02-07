@@ -2,14 +2,14 @@ import { Card, CardActionArea, CardContent, CardMedia, Typography } from '@mui/m
 
 export const ProductCard = ({element}) => {
   return (
-    <Card sx={{ maxWidth: 250, mt: 5, ml: 4}} className="containerCard">
+    <Card sx={{ maxWidth: 250, mt: 5 }} style={{display: 'flex', flexDirection: 'column'}}>
       <CardActionArea>
         <CardMedia
           component="img"
           height="250"
           image={element.img}
         />
-        <CardContent style={{display: "flex", flexDirection: "column"}}>
+        <CardContent style={{display: 'flex', flexDirection: 'column'}}>
           <Typography gutterBottom variant="h6" component="div">
             {element.title}
           </Typography>
