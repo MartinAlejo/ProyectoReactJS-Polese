@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    title: "Notebook Cloudbook - Intel Celeron N4020 - 4GB - 128GB SSD - 14.1 FHD - Win11",
+    title: "Notebook Cloudbook - Intel Celeron N4020 - 4GB - 128GB SSD - 14.1 FHDÑ",
     price: 76.999,
     stock: 5,
     description: "Descripción de Notebook Cloudbook",
@@ -10,7 +10,7 @@ export const products = [
   },
   {
     id: 2,
-    title: "Notebook HYUNDAI HyBook - Intel Celeron N4020 - 4GB - 128GB SSD - 14.1 TN HD - Win10H",
+    title: "Notebook HYUNDAI HyBook - Intel Celeron N4020 - 4GB - 128GB SSD - 14.1 TN HD",
     price: 81.999,
     stock: 5,
     description: "Descripción de Notebook HYUNDAI",
@@ -19,7 +19,7 @@ export const products = [
   },
   {
     id: 3,
-    title: "Notebook - Intel Core i3-1005G1 - 8GB - 256GB SSD - 14 IPS FHD - Win10Home",
+    title: "Notebook - Intel Core i3-1005G1 - 8GB - 256GB SSD - 14 IPS FHD",
     price: 150.699,
     stock: 5,
     description: "Descripción de Notebook Intel Core i3",
@@ -28,11 +28,11 @@ export const products = [
   },
   {
     id: 4,
-    title: "Notebook Dell Inspiron 15 3515 - 15,6 - Ryzen 5 3450U- 8GB - 256GB SSD",
+    title: "Notebook ASUS X515EA - Intel Core i7-1165G7 - 8GB - 512GB SSD - 15.6 FHD",
     price: 219.999,
     stock: 5,
     description: "Descripción de Notebook Intel Core i3",
     category: "notebooks",
-    img: "https://res.cloudinary.com/dhur6a1pk/image/upload/v1675777537/Notebook-Dell-Inspiron-15-3515-15-6-Ryzen-5-3450U-8GB-256GB-SSD_asw6zw.webp",
+    img: "https://res.cloudinary.com/dhur6a1pk/image/upload/v1676000183/Notebook-ASUS-X515EA-Intel-Core-i7-1165G7-8GB-512GB-SSD-15-6-FHD-FreeDOS_pujoqa.png",
   },
 ];
