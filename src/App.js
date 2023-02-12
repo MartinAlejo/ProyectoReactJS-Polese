@@ -1,3 +1,4 @@
+import { Footer } from "./components/Footer/Footer";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import {Navbar} from "./components/Navbar/Navbar";
 
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <Navbar/>
       <ItemListContainer />
+      <Footer />
     </div>
   );
 }
