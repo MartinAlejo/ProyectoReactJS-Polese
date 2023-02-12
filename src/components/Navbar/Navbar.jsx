@@ -30,10 +30,10 @@ export const Navbar = () => {
           </Typography>
 
           <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: "flex", justifyContent: "center",alignItems: "center" }}>
-            <NavItem title="Inicio" href="#"/>
-            <NavItem title="Nosotros" href="#"/>
-            <NavItem title="Productos" href="#"/>
-            <NavItem title="Contacto" href="#"/>
+            <NavItem title="Todos" href="#"/>
+            <NavItem title="Auriculares" href="#"/>
+            <NavItem title="Notebooks" href="#"/>
+            <NavItem title="Procesadores" href="#"/>
           </Typography>
 
           <div style={{marginLeft:"3vw", marginRight: "1vw"}}>

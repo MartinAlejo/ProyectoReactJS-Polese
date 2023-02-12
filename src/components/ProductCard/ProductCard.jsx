@@ -1,4 +1,4 @@
-import { Card, CardContent, CardMedia, Typography } from '@mui/material'
+import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
 
 export const ProductCard = ({element}) => {
   return (
@@ -16,6 +16,15 @@ export const ProductCard = ({element}) => {
           ${element.price}
         </Typography>
       </CardContent>
+      <CardActions style={{ display: "flex", justifyContent: "center"}}>
+        <Button
+          size="large"
+          variant="contained"
+          sx={{ textTransform: "none" }}
+        >
+          Ver más
+        </Button>
+      </CardActions>
     </Card>
   )
 }
