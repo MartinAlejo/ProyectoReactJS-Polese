@@ -6,7 +6,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 export const Footer = () => {
   return (
-    <AppBar position="static" color="primary" sx={{ top: 'auto', bottom: 0, marginTop: "20px" }}>
+    <AppBar position="static" color="primary" sx={{ top: 'auto', bottom: 0, mt: 5 }}>
       <Toolbar sx={{display: "flex", alignItems: "center"}}>
 
         <Typography
