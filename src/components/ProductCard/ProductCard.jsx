@@ -1,8 +1,9 @@
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material'
+import { Link } from 'react-router-dom'
 
 export const ProductCard = ({element}) => {
   return (
-    <Card sx={{ maxWidth: 250, mt: 5 }} style={{display: 'flex', flexDirection: 'column'}}>
+    <Card sx={{ maxWidth: 250, mb: 5 }} style={{display: 'flex', flexDirection: 'column'}}>
       <CardMedia
         component="img"
         height="250"
@@ -17,13 +18,15 @@ export const ProductCard = ({element}) => {
         </Typography>
       </CardContent>
       <CardActions style={{ display: "flex", justifyContent: "center"}}>
-        <Button
-          size="large"
-          variant="contained"
-          sx={{ textTransform: "none" }}
-        >
-          Ver más
-        </Button>
+        <Link to={`/itemDetail/${element.id}`} style={{textDecoration: "none"}}>
+          <Button
+            size="large"
+            variant="contained"
+            sx={{ textTransform: "none", mb: 0.5 }}
+          >
+            Ver más
+          </Button>
+        </Link>
       </CardActions>
     </Card>
   )

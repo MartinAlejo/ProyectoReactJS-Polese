@@ -5,14 +5,14 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 
 export const Footer = () => {
   return (
-    <AppBar position="static" color="primary" sx={{ top: 'auto', bottom: 0, mt: 5 }}>
+    <AppBar position="relative" color="primary" sx={{ mt: 'auto' }} component="footer">
       <Toolbar sx={{display: "flex", alignItems: "center"}}>
 
         <Typography
           variant="body1"
           noWrap
           sx={{
-            ml: 1,
+            ml: 0,
             mr: 0,
             display: { xs: 'none', md: 'flex' },
             fontFamily: 'arial',
@@ -24,9 +24,9 @@ export const Footer = () => {
         </Typography>
 
         <Typography variant="body1" component="div" sx={{ flexGrow: 1, display: "flex", justifyContent: "flex-end", alignItems: "center", gap: "20px" }}>
-          <WhatsAppIcon />
-          <InstagramIcon />
-          <FacebookIcon />
+          <WhatsAppIcon sx={{cursor: "pointer"}} />
+          <InstagramIcon sx={{cursor: "pointer"}} />
+          <FacebookIcon sx={{cursor: "pointer"}} />
         </Typography>
         
       </Toolbar>
