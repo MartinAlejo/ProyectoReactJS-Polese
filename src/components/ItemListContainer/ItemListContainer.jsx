@@ -6,8 +6,6 @@ import { ItemList } from '../ItemList/ItemList'
 export const ItemListContainer = () => {
 
   const { categoryName } = useParams()
-  
-  console.log(categoryName)
 
   const [items, setItems] = useState([])
 

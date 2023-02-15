@@ -1,7 +1,7 @@
 import { AppBar, Toolbar, Typography } from "@mui/material"
 import PhonelinkRoundedIcon from '@mui/icons-material/PhonelinkRounded';
 import { CartWidget } from "../CartWidget/CartWidget";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
   return (
@@ -9,7 +9,7 @@ export const Navbar = () => {
       <Toolbar>
 
         <PhonelinkRoundedIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-        <Link to="/" style={{textDecoration: "none",  color: "white"}}>
+        <NavLink to="/" style={{textDecoration: "none",  color: "white"}}>
           <Typography
             variant="h6"
             noWrap
@@ -26,12 +26,12 @@ export const Navbar = () => {
           >
             BIT BY BIT
           </Typography>
-        </Link>
+        </NavLink>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1, display: "flex", justifyContent: "center",alignItems: "center" }}>
-          <Link to="/" style={{textDecoration: "none", color: "white", marginLeft: "2vw", marginRight: "2vw"}}> Todos </Link>
-          <Link to="/category/auriculares" style={{textDecoration: "none", color: "white", marginLeft: "2vw", marginRight: "2vw"}}>  Auriculares  </Link>
-          <Link to="/category/notebooks" style={{textDecoration: "none", color: "white", marginLeft: "2vw", marginRight: "2vw"}}>  Notebooks  </Link>
-          <Link to="/category/procesadores" style={{textDecoration: "none", color: "white", marginLeft: "2vw", marginRight: "2vw"}}>  Procesadores  </Link>
+          <NavLink to="/" style={{textDecoration: "none", color: "white", marginLeft: "2vw", marginRight: "2vw"}}> Todos </NavLink>
+          <NavLink to="/category/auriculares" style={{textDecoration: "none", color: "white", marginLeft: "2vw", marginRight: "2vw"}}>  Auriculares  </NavLink>
+          <NavLink to="/category/notebooks" style={{textDecoration: "none", color: "white", marginLeft: "2vw", marginRight: "2vw"}}>  Notebooks  </NavLink>
+          <NavLink to="/category/procesadores" style={{textDecoration: "none", color: "white", marginLeft: "2vw", marginRight: "2vw"}}>  Procesadores  </NavLink>
         </Typography>
 
         <div style={{marginLeft:"3vw", marginRight: "1vw"}}>
