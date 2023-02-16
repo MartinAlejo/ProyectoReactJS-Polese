@@ -33,7 +33,7 @@ export const ItemDetailContainer = () => {
         </Typography>
       </CardContent>
       <CardActions style={{display: "flex", flexDirection: "column"}}>
-          <ItemCount initial={1} stockInicial={product.stock} />
+          <ItemCount initial={1} stockInicial={product.stock} productName={product.title} />
       </CardActions>
     </Card>
   )
