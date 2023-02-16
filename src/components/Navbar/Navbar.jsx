@@ -35,7 +35,7 @@ export const Navbar = () => {
         </Typography>
 
         <div style={{marginLeft:"3vw", marginRight: "1vw"}}>
-          <CartWidget />
+          <NavLink to="/cart" style={{textDecoration: "none", color: "white"}}> <CartWidget /> </NavLink>
         </div>
         
       </Toolbar>
