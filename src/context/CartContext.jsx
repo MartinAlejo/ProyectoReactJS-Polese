@@ -40,7 +40,7 @@ export const CartContextProvider = ({children}) => {
   const deleteProductById = ( id ) => {
     let newCart = cart.filter( (prod) => prod.id !== id)
 
-    return newCart
+    setCart(newCart)
   }
 
   const isInCart = ( id ) => {
