@@ -1,7 +1,24 @@
 import { Card, CardActions, CardContent, CardMedia, Typography } from "@mui/material"
+import { useContext } from "react"
+import { CartContext } from "../../context/CartContext"
 import { ItemCount } from "../ItemCount/ItemCount"
 
 export const ItemDetail = ( {product} ) => {
+
+  const { addToCart, getQuantityById } = useContext( CartContext )
+
+  const onAdd = ( cantidad ) => {
+    const obj = {
+      ...product,
+      quantity: cantidad
+    }
+
+    addToCart(obj)
+
+  }
+
+  const quantity = getQuantityById(product.id)
+
   return (
     <Card sx={{ maxWidth: 400, mb: 5 }} style={{display: 'flex', flexDirection: 'column', alignSelf: 'center'}}>
       <CardMedia
@@ -21,7 +38,7 @@ export const ItemDetail = ( {product} ) => {
         </Typography>
       </CardContent>
       <CardActions style={{display: "flex", flexDirection: "column"}}>
-          <ItemCount initial={1} stockInicial={product.stock} productName={product.title} />
+          <ItemCount initial={quantity} stockInicial={product.stock} productName={product.title} onAdd={onAdd} />
       </CardActions>
     </Card>
   )

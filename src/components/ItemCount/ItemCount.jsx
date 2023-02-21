@@ -1,7 +1,7 @@
 import { Button } from "@mui/material"
 import { useEffect, useState } from "react"
 
-export const ItemCount = ({initial = 1, stockInicial, productName}) => {
+export const ItemCount = ({initial = 1, stockInicial, productName, onAdd}) => {
 
   const [contador, setContador] = useState(initial)
   const [stock, setStock] = useState(stockInicial)
@@ -26,18 +26,6 @@ export const ItemCount = ({initial = 1, stockInicial, productName}) => {
     }
   }
 
-  const agregarAlCarrito = () => {
-
-    if (contador === 0) {
-      return
-    }
-
-    console.log(`Se agregaron ${contador} unidades de ${productName} al carrito`)
-    
-    setStock(stock - contador)
-    setContador(1)
-  }
-
   return (
     <>
       <div style={ {display: "flex", alignItems: "center"} }>
@@ -46,7 +34,7 @@ export const ItemCount = ({initial = 1, stockInicial, productName}) => {
         <Button variant="outlined" onClick={sumar} sx={{ml: 1, mr: 5}} disabled={stock <= contador}> + </Button>
       </div>
       <div>
-        <Button variant="outlined" onClick={agregarAlCarrito} sx={{mb: 1}} disabled={stock === 0}> Agregar al carrito </Button>
+        <Button variant="outlined" onClick={() => onAdd(contador)} sx={{mb: 1}} disabled={stock === 0}> Agregar al carrito </Button>
       </div>
     </>
   )

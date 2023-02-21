@@ -52,7 +52,7 @@ export const CartContextProvider = ({children}) => {
 
     let product = cart.find( (prod) => prod.id === id)
 
-    return product.quantity
+    return product?.quantity
   }
 
   const getTotalItems = () => {
