@@ -14,7 +14,7 @@ export const ProductCard = ({element}) => {
           {element.title}
         </Typography>
         <Typography variant="body1" color="text.secondary" align="center" style={{marginTop: "auto"}}>
-          ${element.price}
+          ${element.price.toLocaleString()}
         </Typography>
       </CardContent>
       <CardActions style={{ display: "flex", justifyContent: "center"}}>

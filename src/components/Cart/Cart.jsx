@@ -18,7 +18,7 @@ export const Cart = () => {
           <button onClick={() => deleteProductById(prod.id)}> Remover del Carrito </button>
         </div>
       })}
-      <h1><b> PRECIO TOTAL: </b> ${getTotalPrice().toFixed(3)} </h1>
+      <h1><b> PRECIO TOTAL: </b> ${getTotalPrice().toLocaleString()} </h1>
       <button onClick={() => clearCart()} style={{marginTop: "30px", marginBottom: "30px", marginLeft: "12px"}}> Vaciar carrito </button>
     </div>
   )

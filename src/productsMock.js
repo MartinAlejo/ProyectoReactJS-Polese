@@ -2,7 +2,7 @@ export const products = [
   {
     id: 1,
     title: "Notebook Cloudbook - Intel Celeron N4020 - 4GB - 128GB SSD - 14.1 FHDÑ",
-    price: 76.999,
+    price: 76999,
     stock: 5,
     description: "Descripción de Notebook Cloudbook",
     category: "notebooks",
@@ -11,7 +11,7 @@ export const products = [
   {
     id: 2,
     title: "Notebook HYUNDAI HyBook - Intel Celeron N4020 - 4GB - 128GB SSD - 14.1 TN HD",
-    price: 81.999,
+    price: 81999,
     stock: 5,
     description: "Descripción de Notebook HYUNDAI",
     category: "notebooks",
@@ -20,7 +20,7 @@ export const products = [
   {
     id: 3,
     title: "Notebook - Intel Core i3-1005G1 - 8GB - 256GB SSD - 14 IPS FHD",
-    price: 150.699,
+    price: 150699,
     stock: 5,
     description: "Descripción de Notebook Intel Core i3",
     category: "notebooks",
@@ -29,7 +29,7 @@ export const products = [
   {
     id: 4,
     title: "Notebook ASUS X515EA - Intel Core i7-1165G7 - 8GB - 512GB SSD - 15.6 FHD",
-    price: 280.499,
+    price: 280499,
     stock: 5,
     description: "Descripción de Notebook Intel Core i7",
     category: "notebooks",
@@ -38,7 +38,7 @@ export const products = [
   {
     id: 5,
     title: "Auricular Gamer HyperX CloudX Chat Xbox One / Series X|S Mono 3.5mm",
-    price: 5.999,
+    price: 5999,
     stock: 5,
     description: "Descripción de Auricular Gamer HyperX CloudX",
     category: "auriculares",
@@ -47,7 +47,7 @@ export const products = [
   {
     id: 6,
     title: "Auriculares Gamer XPG EMIX H20 7.1 Surround 50mm USB RGB",
-    price: 11.999,
+    price: 11999,
     stock: 5,
     description: "Descripción de Auricular Gamer XPG EMIX",
     category: "auriculares",
@@ -56,7 +56,7 @@ export const products = [
   {
     id: 7,
     title: "Auriculares Gamer Cooler Master CH321 50mm USB RGB",
-    price: 11.399,
+    price: 11399,
     stock: 5,
     description: "Descripción de Auricular Gamer Cooler Master",
     category: "auriculares",
@@ -65,7 +65,7 @@ export const products = [
   {
     id: 8,
     title: "Auriculares Gamer Marvo Scorpion HG8929 50mm USB 3.5mm RGB",
-    price: 6.599,
+    price: 6599,
     stock: 5,
     description: "Descripción de Auricular Gamer Marvo Scorpion",
     category: "auriculares",
@@ -74,7 +74,7 @@ export const products = [
   {
     id: 9,
     title: "Procesador Intel Core i7-11700KF 5.0GHz 16MB Rocket Lake LGA1200",
-    price: 137.999,
+    price: 137999,
     stock: 5,
     description: "Descripción de Procesador Intel Core i7",
     category: "procesadores",
@@ -83,7 +83,7 @@ export const products = [
   {
     id: 10,
     title: "Procesador AMD Ryzen 7 5700G 4.6 GHz 16MB Zen3 Gráficos Radeon AM4 c/ Cooler",
-    price: 103.999,
+    price: 103999,
     stock: 5,
     description: "Descripción de Procesador AMD Ryzen 7",
     category: "procesadores",
@@ -92,7 +92,7 @@ export const products = [
   {
     id: 11,
     title: "Procesador AMD Ryzen 5 5600G 4.4GHz 16MB Zen3 Gráficos Radeon AM4 c/ Cooler",
-    price: 79.999,
+    price: 79999,
     stock: 5,
     description: "Descripción de Procesador AMD Ryzen 5",
     category: "procesadores",
@@ -101,7 +101,7 @@ export const products = [
   {
     id: 12,
     title: "Procesador Intel Core i3-10105F 4.4GHz 6MB Comet Lake LGA1200 c/ Cooler",
-    price: 27.999,
+    price: 27999,
     stock: 5,
     description: "Descripción de Procesador Intel Core i3",
     category: "procesadores",
