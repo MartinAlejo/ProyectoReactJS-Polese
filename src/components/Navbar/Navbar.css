@@ -1,0 +1,13 @@
+.navbar-item {
+  text-decoration: none;
+  margin-left: 2vw; 
+  margin-right: 2vw;
+}
+
+.active-navbar-item {
+  color: white;
+}
+
+.unactive-navbar-item {
+  color: rgb(224, 218, 218);
+}
