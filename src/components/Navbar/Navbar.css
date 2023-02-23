@@ -11,3 +11,7 @@
 .unactive-navbar-item {
   color: rgb(224, 218, 218);
 }
+
+.unactive-navbar-item:hover {
+  color: rgb(245, 236, 236);
+}
