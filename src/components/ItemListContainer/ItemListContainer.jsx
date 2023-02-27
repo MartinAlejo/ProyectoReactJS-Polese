@@ -37,17 +37,19 @@ export const ItemListContainer = () => {
     else {
       
       getDocs(itemCollection)
-      .then((res) => {
-        const products = res.docs.map( product => {
-          return {
-            ...product.data(),
-            id: product.id
-          }
-        })
+        .then((res) => {
+          const products = res.docs.map( product => {
+            return {
+              ...product.data(),
+              id: product.id
+            }
+          })
 
-        setItems(products)
-      })
-      .catch((err) => console.log(err))
+          setItems(products)
+        })
+        .catch((err) => {
+          console.log(err)
+        })
     }
 
   }, [categoryName])
