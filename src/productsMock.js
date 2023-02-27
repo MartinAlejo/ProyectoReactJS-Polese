@@ -1,7 +1,7 @@
 export const products = [
   {
     id: 1,
-    title: "Notebook Cloudbook - Intel Celeron N4020 - 4GB - 128GB SSD - 14.1 FHDÑ",
+    title: "Notebook Cloudbook - Intel Celeron N4020 - 4GB - 128GB SSD - 14.1 FHD",
     price: 76999,
     stock: 5,
     description: "Descripción de Notebook Cloudbook",
