@@ -34,7 +34,7 @@ export const ItemDetail = ( {product} ) => {
           {product.description}
         </Typography>
         <Typography variant="h6" color="text.secondary" align="center" style={{marginTop: "auto"}}>
-          ${product.price}
+          ${product.price?.toLocaleString()}
         </Typography>
       </CardContent>
       <CardActions style={{display: "flex", flexDirection: "column"}}>
