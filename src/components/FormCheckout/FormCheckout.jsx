@@ -1,8 +1,8 @@
-import { addDoc, collection, serverTimestamp } from "firebase/firestore"
+import { addDoc, collection, doc, serverTimestamp, updateDoc } from "firebase/firestore"
 import { useState } from "react"
 import { db } from "../../firebaseConfig"
 
-export const FormCheckout = ({cart, total, setOrderId}) => {
+export const FormCheckout = ({cart, total, setOrderId, clearCart}) => {
 
   const [userInfo, setUserInfo] = useState({ email: "", phone: ""})
 
@@ -18,6 +18,7 @@ export const FormCheckout = ({cart, total, setOrderId}) => {
 
     const ordersCollection = collection(db, "orders")
 
+    // Agregamos el documento (la orden) a la collection (de orders)
     addDoc(ordersCollection, order)
       .then(
         (res) => setOrderId(res.id)
@@ -26,7 +27,16 @@ export const FormCheckout = ({cart, total, setOrderId}) => {
         (err) => console.log(err)
       )
     
-    console.log("Se realizo la compra")
+    // Actualizamos el stock de los productos que compramos
+    for (let product of cart) {
+      let refDoc = doc(db, "products", product.id)
+
+      let updatedStock = { stock: product.stock - product.quantity }
+      
+      updateDoc(refDoc, updatedStock)
+    }
+    
+    clearCart()
   }
 
   return (

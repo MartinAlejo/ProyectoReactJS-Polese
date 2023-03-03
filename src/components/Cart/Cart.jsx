@@ -21,7 +21,7 @@ export const Cart = () => {
 
   if (buy) {
     // Si el usuario va a finalizar la compra
-    return <FormCheckout cart={cart} total={getTotalPrice()} setOrderId={setOrderId} />
+    return <FormCheckout cart={cart} total={getTotalPrice()} setOrderId={setOrderId} clearCart={clearCart} />
   }
 
   if (isEmpty()) {
