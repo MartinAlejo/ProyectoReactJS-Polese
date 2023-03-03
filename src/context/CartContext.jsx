@@ -72,6 +72,10 @@ export const CartContextProvider = ({children}) => {
     return totalPrice
   }
 
+  const isEmpty = () => {
+    return (getTotalItems() === 0)
+  }
+
   const data = {
     cart: cart,
     addToCart,
@@ -80,7 +84,8 @@ export const CartContextProvider = ({children}) => {
     isInCart,
     getQuantityById,
     getTotalItems,
-    getTotalPrice
+    getTotalPrice,
+    isEmpty
   }
 
   return (
