@@ -1,5 +1,6 @@
 import { useContext, useState } from "react"
 import { CartContext } from "../../context/CartContext"
+import { EmptyCart } from "../EmptyCart/EmptyCart"
 import { FinishBuy } from "../FinishBuy/FinishBuy"
 import { FormCheckout } from "../FormCheckout/FormCheckout"
 
@@ -25,7 +26,7 @@ export const Cart = () => {
   }
 
   if (isEmpty()) {
-    return <div>Carrito vacío</div>
+    return <EmptyCart />
   }
 
   return (
