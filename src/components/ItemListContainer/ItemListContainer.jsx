@@ -5,6 +5,7 @@ import { ItemList } from '../ItemList/ItemList'
 import { db } from '../../firebaseConfig'
 
 import { getDocs, collection, query, where } from 'firebase/firestore'
+import { CircularProgress } from '@mui/material'
 
 export const ItemListContainer = () => {
 
@@ -55,6 +56,6 @@ export const ItemListContainer = () => {
   }, [categoryName])
 
   return (
-    <ItemList items={items} />
+    items.length > 0 ? <ItemList items={items} /> : <div style={{minHeight: "65vh", width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}} > <CircularProgress size="10vh" /> </div>
   )
 }
