@@ -56,6 +56,6 @@ export const ItemListContainer = () => {
   }, [categoryName])
 
   return (
-    items.length > 0 ? <ItemList items={items} /> : <div style={{minHeight: "65vh", width: "100%", display: "flex", justifyContent: "center", alignItems: "center"}} > <CircularProgress size="10vh" /> </div>
+    items.length > 0 ? <ItemList items={items} /> : <CircularProgress size="10vh" style={{alignSelf: "center", marginTop: "auto", marginBottom: "auto"}} />
   )
 }
