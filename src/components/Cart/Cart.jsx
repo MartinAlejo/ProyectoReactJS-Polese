@@ -54,7 +54,7 @@ export const Cart = () => {
       <div style={{display: "flex", justifyContent: "space-between"}}>
         <Button onClick={() => askConfirmationClearCart()} style={{marginTop: "30px", marginBottom: "30px", marginLeft: "12px"}} size="small" variant="contained" sx={{ textTransform: "none", mt: 3}} color="error"> Vaciar carrito </Button>
         <div style={{display: "flex", alignItems: "center"}}>
-          <h3 style={{marginRight: "20px"}}><b> Total: </b> ${getTotalPrice().toLocaleString()} </h3>
+          <h3 style={{marginRight: "30px"}}><b> Total: </b> ${getTotalPrice().toLocaleString()} </h3>
           <Button onClick={() => setBuy(true)} style={{marginTop: "30px", marginBottom: "30px"}} size="small" variant="contained" sx={{ textTransform: "none", mt: 3 }}> Ir a finalizar compra </Button>
         </div>
       </div>
