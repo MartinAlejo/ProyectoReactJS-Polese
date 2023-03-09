@@ -5,6 +5,7 @@ import { CartContext } from "../../context/CartContext"
 import { EmptyCart } from "../EmptyCart/EmptyCart"
 import { FinishBuy } from "../FinishBuy/FinishBuy"
 import { FormCheckout } from "../FormCheckout/FormCheckout"
+import { ProductCartCard } from "../ProductCartCard/ProductCartCard"
 
 export const Cart = () => {
 
@@ -46,18 +47,17 @@ export const Cart = () => {
 
   return (
     <div style={{alignSelf: "center"}}>
-      <h1> <b> CARRITO </b> </h1>
-      {cart.map( (prod) => { 
-        return <div key={prod.id} style={{border: "2px solid black", padding: "10px", marginBottom: "15px"}}>
-          <h3> Nombre: {prod.title} </h3>
-          <h3> Precio: {prod.price.toLocaleString()} </h3>
-          <h3> Cantidad: {prod.quantity} </h3>
-          <Button onClick={() => deleteProductById(prod.id)} size="small" variant="contained" sx={{ textTransform: "none", mt: 3 }}> Remover del Carrito </Button>
-        </div>
+      <h1> <b> Carrito de compras </b> </h1>
+      {cart.map( (product) => { 
+        return <ProductCartCard key={product.id} product={product} deleteProductById={deleteProductById} />
       })}
-      <h1><b> PRECIO TOTAL: </b> ${getTotalPrice().toLocaleString()} </h1>
-      <Button onClick={() => setBuy(true)} style={{marginTop: "30px", marginBottom: "30px"}} size="small" variant="contained" sx={{ textTransform: "none", mt: 3 }}> Ir a finalizar compra </Button>
-      <Button onClick={() => askConfirmationClearCart()} style={{marginTop: "30px", marginBottom: "30px", marginLeft: "12px"}} size="small" variant="contained" sx={{ textTransform: "none", mt: 3}} color="error"> Vaciar carrito </Button>
+      <div style={{display: "flex", justifyContent: "space-between"}}>
+        <Button onClick={() => askConfirmationClearCart()} style={{marginTop: "30px", marginBottom: "30px", marginLeft: "12px"}} size="small" variant="contained" sx={{ textTransform: "none", mt: 3}} color="error"> Vaciar carrito </Button>
+        <div style={{display: "flex", alignItems: "center"}}>
+          <h3 style={{marginRight: "20px"}}><b> Total: </b> ${getTotalPrice().toLocaleString()} </h3>
+          <Button onClick={() => setBuy(true)} style={{marginTop: "30px", marginBottom: "30px"}} size="small" variant="contained" sx={{ textTransform: "none", mt: 3 }}> Ir a finalizar compra </Button>
+        </div>
+      </div>
     </div>
   )
 }
