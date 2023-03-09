@@ -55,7 +55,7 @@ export const ItemDetail = ( {product} ) => {
         </Typography>
       </CardContent>
       <CardActions style={{display: "flex", flexDirection: "column"}}>
-          <ItemCount initial={quantity} stockInicial={product.stock} productName={product.title} onAdd={onAdd} />
+          <ItemCount initial={quantity} stockInicial={product.stock} onAdd={onAdd} />
       </CardActions>
       <ToastContainer
         position="bottom-right"

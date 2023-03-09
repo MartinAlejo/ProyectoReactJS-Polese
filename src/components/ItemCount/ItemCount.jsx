@@ -1,7 +1,7 @@
 import { Button } from "@mui/material"
 import { useEffect, useState } from "react"
 
-export const ItemCount = ({initial = 1, stockInicial, productName, onAdd}) => {
+export const ItemCount = ({initial = 1, stockInicial, onAdd}) => {
 
   const [contador, setContador] = useState(initial)
   const [stock, setStock] = useState(stockInicial)
