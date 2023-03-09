@@ -3,6 +3,9 @@ import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import { ItemCount } from "../ItemCount/ItemCount"
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export const ItemDetail = ( {product} ) => {
 
   const { addToCart, getQuantityById } = useContext( CartContext )
@@ -15,6 +18,20 @@ export const ItemDetail = ( {product} ) => {
 
     addToCart(obj)
 
+    fireToast()
+  }
+
+  const fireToast = () => {
+    toast.success('El producto se agrego al carrito', {
+      position: "bottom-right",
+      autoClose: 1000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: false,
+      progress: undefined,
+      theme: "colored",
+    });
   }
 
   const quantity = getQuantityById(product.id)
@@ -40,6 +57,18 @@ export const ItemDetail = ( {product} ) => {
       <CardActions style={{display: "flex", flexDirection: "column"}}>
           <ItemCount initial={quantity} stockInicial={product.stock} productName={product.title} onAdd={onAdd} />
       </CardActions>
+      <ToastContainer
+        position="bottom-right"
+        autoClose={1000}
+        hideProgressBar
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss={false}
+        draggable={false}
+        pauseOnHover={false}
+        theme="colored"
+      />
     </Card>
   )
 }

@@ -1,3 +1,4 @@
+import { Button } from "@mui/material"
 import { useContext, useState } from "react"
 import Swal from "sweetalert2"
 import { CartContext } from "../../context/CartContext"
@@ -51,12 +52,12 @@ export const Cart = () => {
           <h3> Nombre: {prod.title} </h3>
           <h3> Precio: {prod.price.toLocaleString()} </h3>
           <h3> Cantidad: {prod.quantity} </h3>
-          <button onClick={() => deleteProductById(prod.id)}> Remover del Carrito </button>
+          <Button onClick={() => deleteProductById(prod.id)} size="small" variant="contained" sx={{ textTransform: "none", mt: 3 }}> Remover del Carrito </Button>
         </div>
       })}
       <h1><b> PRECIO TOTAL: </b> ${getTotalPrice().toLocaleString()} </h1>
-      <button onClick={() => setBuy(true)} style={{marginTop: "30px", marginBottom: "30px", marginLeft: "12px"}}> Ir a finalizar compra </button>
-      <button onClick={() => askConfirmationClearCart()} style={{marginTop: "30px", marginBottom: "30px", marginLeft: "12px"}}> Vaciar carrito </button>
+      <Button onClick={() => setBuy(true)} style={{marginTop: "30px", marginBottom: "30px"}} size="small" variant="contained" sx={{ textTransform: "none", mt: 3 }}> Ir a finalizar compra </Button>
+      <Button onClick={() => askConfirmationClearCart()} style={{marginTop: "30px", marginBottom: "30px", marginLeft: "12px"}} size="small" variant="contained" sx={{ textTransform: "none", mt: 3}} color="error"> Vaciar carrito </Button>
     </div>
   )
 }
