@@ -5,7 +5,7 @@ import { db } from "../../firebaseConfig"
 
 export const FormCheckout = ({cart, total, setOrder, clearCart}) => {
 
-  const [userInfo, setUserInfo] = useState({ email: "", phone: ""})
+  const [userInfo, setUserInfo] = useState({name: "", email: "", phone: ""})
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -41,13 +41,12 @@ export const FormCheckout = ({cart, total, setOrder, clearCart}) => {
   }
 
   return (
-    <div style={{alignSelf: "center", border: "2px solid gray", borderRadius: "20px", padding: "30px"}}>
+    <div style={{alignSelf: "center", border: "2px solid gray", borderRadius: "20px", padding: "30px", marginBottom: "8vh"}}>
       <h3>Por favor, complete con sus datos</h3>
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column"}}>
-        <TextField id="outlined-basic" label="E-mail" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, email: e.target.value})} />
-        <TextField id="outlined-basic" label="Teléfono" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, phone: e.target.value})} />
-        {/* <input type="text" placeholder="Ingrese su email" onChange={(e) => setUserInfo({...userInfo, email: e.target.value})} />
-        <input type="text" placeholder="Ingrese su teléfono" onChange={(e) => setUserInfo({...userInfo, phone: e.target.value})} /> */}
+        <TextField label="Nombre completo" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, name: e.target.value})} required/>
+        <TextField label="E-mail" type="email" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, email: e.target.value})} required/>
+        <TextField label="Teléfono" type="tel" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, phone: e.target.value})} required/>
         <Button type="submit" size="small" variant="contained" sx={{mt: 3}}>Comprar</Button>
       </form>
     </div>

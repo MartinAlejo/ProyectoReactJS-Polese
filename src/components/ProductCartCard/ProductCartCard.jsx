@@ -15,7 +15,7 @@ export const ProductCartCard = ({ product, deleteProductById }) => {
             {product.title}
           </Typography>
           <Typography component="div"variant="h6" sx={{mb: 1}}>
-            Precio: {product.price.toLocaleString()}
+            Precio unitario: {product.price.toLocaleString()}
           </Typography>
           <Typography component="div"variant="h6" sx={{mb: 1}}>
             Cantidad: {product.quantity}
