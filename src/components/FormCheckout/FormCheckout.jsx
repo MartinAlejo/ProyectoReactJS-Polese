@@ -2,7 +2,7 @@ import { addDoc, collection, doc, serverTimestamp, updateDoc } from "firebase/fi
 import { useState } from "react"
 import { db } from "../../firebaseConfig"
 
-export const FormCheckout = ({cart, total, setOrderId, clearCart}) => {
+export const FormCheckout = ({cart, total, setOrder, clearCart}) => {
 
   const [userInfo, setUserInfo] = useState({ email: "", phone: ""})
 
@@ -21,7 +21,7 @@ export const FormCheckout = ({cart, total, setOrderId, clearCart}) => {
     // Agregamos el documento (la orden) a la collection (de orders)
     addDoc(ordersCollection, order)
       .then(
-        (res) => setOrderId(res.id)
+        (res) => setOrder({...order, id: res.id})
       )
       .catch(
         (err) => console.log(err)

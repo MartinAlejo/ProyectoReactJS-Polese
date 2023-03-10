@@ -12,7 +12,7 @@ export const Cart = () => {
   const { cart, clearCart, deleteProductById, getTotalPrice, isEmpty } = useContext( CartContext )
 
   const [buy, setBuy] = useState(false)
-  const [orderId, setOrderId] = useState(null);
+  const [order, setOrder] = useState(null);
 
   const askConfirmationClearCart = () => {
     Swal.fire({
@@ -29,16 +29,16 @@ export const Cart = () => {
     })
   }
 
-  if (orderId) {
+  if (order) {
     // Si el usuario ya finalizo la compra
     return (
-      <FinishBuy orderId={orderId} />
+      <FinishBuy order={order} />
     )
   }
 
   if (buy) {
     // Si el usuario va a finalizar la compra
-    return <FormCheckout cart={cart} total={getTotalPrice()} setOrderId={setOrderId} clearCart={clearCart} />
+    return <FormCheckout cart={cart} total={getTotalPrice()} setOrder={setOrder} clearCart={clearCart} />
   }
 
   if (isEmpty()) {
