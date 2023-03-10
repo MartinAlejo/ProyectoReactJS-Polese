@@ -1,3 +1,4 @@
+import { Button, TextField } from "@mui/material"
 import { addDoc, collection, doc, serverTimestamp, updateDoc } from "firebase/firestore"
 import { useState } from "react"
 import { db } from "../../firebaseConfig"
@@ -40,11 +41,14 @@ export const FormCheckout = ({cart, total, setOrder, clearCart}) => {
   }
 
   return (
-    <div>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Ingrese su email" onChange={(e) => setUserInfo({...userInfo, email: e.target.value})} />
-        <input type="text" placeholder="Ingrese su teléfono" onChange={(e) => setUserInfo({...userInfo, phone: e.target.value})} />
-        <button>Comprar</button>
+    <div style={{alignSelf: "center", border: "2px solid gray", borderRadius: "20px", padding: "30px"}}>
+      <h3>Por favor, complete con sus datos</h3>
+      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column"}}>
+        <TextField id="outlined-basic" label="E-mail" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, email: e.target.value})} />
+        <TextField id="outlined-basic" label="Teléfono" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, phone: e.target.value})} />
+        {/* <input type="text" placeholder="Ingrese su email" onChange={(e) => setUserInfo({...userInfo, email: e.target.value})} />
+        <input type="text" placeholder="Ingrese su teléfono" onChange={(e) => setUserInfo({...userInfo, phone: e.target.value})} /> */}
+        <Button type="submit" size="small" variant="contained" sx={{mt: 3}}>Comprar</Button>
       </form>
     </div>
   )
