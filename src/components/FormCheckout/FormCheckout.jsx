@@ -6,6 +6,7 @@ import { db } from "../../firebaseConfig"
 export const FormCheckout = ({cart, total, setOrder, clearCart}) => {
 
   const [userInfo, setUserInfo] = useState({name: "", email: "", phone: ""})
+  const [emailConfirmation, setEmailConfirmation] = useState(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -46,8 +47,9 @@ export const FormCheckout = ({cart, total, setOrder, clearCart}) => {
       <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column"}}>
         <TextField label="Nombre completo" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, name: e.target.value})} required/>
         <TextField label="E-mail" type="email" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, email: e.target.value})} required/>
+        <TextField label="Confirmar e-mail" type="email" variant="outlined" sx={{mt: 3}} onChange={(e) => setEmailConfirmation( e.target.value )} required/>
         <TextField label="Teléfono" type="tel" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, phone: e.target.value})} required/>
-        <Button type="submit" size="small" variant="contained" sx={{mt: 3}}>Comprar</Button>
+        <Button type="submit" size="small" variant="contained" sx={{mt: 3}} disabled={userInfo.email !== emailConfirmation}>Comprar</Button>
       </form>
     </div>
   )
