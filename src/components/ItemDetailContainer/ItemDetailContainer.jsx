@@ -7,12 +7,15 @@ import { toast } from 'react-toastify';
 
 import { db } from "../../firebaseConfig"
 import { collection, doc, getDoc } from "firebase/firestore"
+import { NotFound } from "../NotFound/NotFound"
 
 export const ItemDetailContainer = () => {
 
   const { id } = useParams()
 
   const [product, setProduct] = useState({})
+
+  const [productNotFound, setProductNotFound] = useState(false)
 
   const { addToCart, getQuantityById } = useContext( CartContext )
 
@@ -50,10 +53,16 @@ export const ItemDetailContainer = () => {
 
     getDoc(ref)
       .then( (res) => {
+        
+        if (!res.data()) {
+          setProductNotFound(true)
+        }
+        
         setProduct({
           ...res.data(),
           id: res.id
         })
+
       })
       .catch( (err) => {
         console.log(err)
@@ -62,6 +71,6 @@ export const ItemDetailContainer = () => {
   }, [id])
 
   return (
-    <ItemDetail product={product} onAdd={onAdd} quantity={quantity} />
+    productNotFound ? <NotFound /> : <ItemDetail product={product} onAdd={onAdd} quantity={quantity} />
   )
 }
