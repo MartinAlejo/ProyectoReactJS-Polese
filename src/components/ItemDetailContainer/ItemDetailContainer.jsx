@@ -72,7 +72,6 @@ export const ItemDetailContainer = () => {
   }, [id])
 
   if (Object.keys(product).length === 0) {
-
     return <CircularProgress size="10vh" style={{alignSelf: "center", marginTop: "auto", marginBottom: "auto"}} />
   }
 
