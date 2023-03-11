@@ -8,6 +8,7 @@ import { toast } from 'react-toastify';
 import { db } from "../../firebaseConfig"
 import { collection, doc, getDoc } from "firebase/firestore"
 import { NotFound } from "../NotFound/NotFound"
+import { CircularProgress } from "@mui/material"
 
 export const ItemDetailContainer = () => {
 
@@ -69,6 +70,11 @@ export const ItemDetailContainer = () => {
       })
 
   }, [id])
+
+  if (Object.keys(product).length === 0) {
+
+    return <CircularProgress size="10vh" style={{alignSelf: "center", marginTop: "auto", marginBottom: "auto"}} />
+  }
 
   return (
     productNotFound ? <NotFound /> : <ItemDetail product={product} onAdd={onAdd} quantity={quantity} />
