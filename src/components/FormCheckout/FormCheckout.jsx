@@ -42,15 +42,23 @@ export const FormCheckout = ({cart, total, setOrder, clearCart}) => {
   }
 
   return (
-    <div style={{alignSelf: "center", border: "2px solid gray", borderRadius: "20px", padding: "30px", marginBottom: "8vh"}}>
-      <h3>Por favor, complete con sus datos</h3>
-      <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column"}}>
-        <TextField label="Nombre completo" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, name: e.target.value})} required/>
-        <TextField label="E-mail" type="email" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, email: e.target.value})} required/>
-        <TextField label="Confirmar e-mail" type="email" variant="outlined" sx={{mt: 3}} onChange={(e) => setEmailConfirmation( e.target.value )} required/>
-        <TextField label="Teléfono" type="tel" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, phone: e.target.value})} required/>
-        <Button type="submit" size="small" variant="contained" sx={{mt: 3}} disabled={userInfo.email !== emailConfirmation}>Comprar</Button>
-      </form>
-    </div>
+    <>
+      <div style={{width: "50vw", alignSelf: "center", border: "2px solid gray", borderRadius: "20px", padding: "30px", marginBottom: "8vh"}}>
+        <h2> <i> <u> Detalles: </u> </i> </h2>
+        <h3> Total: ${total.toLocaleString()} </h3>
+        <h3> Productos:  </h3>
+        {cart.map( (item) => { return <li key={item.id} style={{marginBottom: "3vh"}}> {item.title} <b> ({item.quantity}) </b> </li>})}
+      </div>
+      <div style={{width: "50vw", alignSelf: "center", border: "2px solid gray", borderRadius: "20px", padding: "30px", marginBottom: "8vh"}}>
+        <h3>Por favor, complete con sus datos</h3>
+        <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column"}}>
+          <TextField label="Nombre completo" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, name: e.target.value})} required/>
+          <TextField label="E-mail" type="email" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, email: e.target.value})} required/>
+          <TextField label="Confirmar e-mail" type="email" variant="outlined" sx={{mt: 3}} onChange={(e) => setEmailConfirmation( e.target.value )} required/>
+          <TextField label="Teléfono" type="tel" variant="outlined" sx={{mt: 3}} onChange={(e) => setUserInfo({...userInfo, phone: e.target.value})} required/>
+          <Button type="submit" size="small" variant="contained" sx={{mt: 3}} disabled={userInfo.email !== emailConfirmation}>Finalizar compra</Button>
+        </form>
+      </div>
+    </>
   )
 }
