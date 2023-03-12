@@ -4,7 +4,7 @@ Alumno: Martin Alejo Polese
 
 # E-commerce "Bit By Bit"
 
-Venta de productos informaticos. Se desarrollo con ReactJS y librerías varías. Para el backend se utiliza Firebase.
+Venta de productos informaticos. Se desarrollo con ReactJS y librerías varías (sweet alert, toastify, react router y material ui). Para el backend se utiliza Firebase.
 
 # Instalación
 
