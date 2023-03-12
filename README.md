@@ -6,6 +6,8 @@ Alumno: Martin Alejo Polese
 
 Venta de productos informaticos. Se desarrollo con ReactJS y librerías varías (sweet alert, toastify, react router y material ui). Para el backend se utiliza Firebase.
 
+Deploy: https://proyecto-react-js-polese.vercel.app/
+
 # Instalación
 
 - Clonar el repositorio
